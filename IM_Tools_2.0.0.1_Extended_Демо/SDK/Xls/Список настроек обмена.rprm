@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Список настроек обмена.rprm">
+  <Parameters />
+  <Cycles>
+    <Cycle Name="c1" CycleType="0" StartCycle="4" EndCycle="4" LowBorder="1" HighBorder="6" InfiniteBorders="False" TuneExpressions="Ном;Наименование;Наим_сокр;Тип;Формат;Расположение" SortOrder="" SortOrder2="" AdditionalExpressions="" CrossAdditionalExpressions="" ExcludeRowCharts="" ExcludeColumnCharts="">
+      <IsValid>true</IsValid>
+    </Cycle>
+  </Cycles>
+  <Expressions>
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.ID_НАСТРОЙКА_ОБМЕНА.СПИСОК(Сортировка='НОМ_ПП')" Variable="lst_id_exch" Name="" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.НОМ_ПП.СПИСОК(Фильтр_списка='ID_НАСТРОЙКА_ОБМЕНА=$$эл1;lst_id_exch')" Variable="lst_nom" Name="" />
+    <Expression Value="#$СПИСОК.ЭЛЕМЕНТ(СПИСОК=lst_nom)" Variable="" Name="Ном" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.НАИМЕНОВАНИЕ_ПОЛНОЕ.СПИСОК(Фильтр_списка='ID_НАСТРОЙКА_ОБМЕНА=$$эл1;lst_id_exch')" Variable="lst_name" Name="" />
+    <Expression Value="#$СПИСОК.ЭЛЕМЕНТ(СПИСОК=lst_name)" Variable="" Name="Наименование" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.НАИМ_СОКР.СПИСОК(Фильтр_списка='ID_НАСТРОЙКА_ОБМЕНА=$$эл1;lst_id_exch')" Variable="lst_name_sh" Name="" />
+    <Expression Value="#$СПИСОК.ЭЛЕМЕНТ(СПИСОК=lst_name_sh)" Variable="" Name="Наим_сокр" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.ID_ТИП_НАСТРОЙКИ_ВВОДА.СПИСОК(Фильтр_списка='ID_НАСТРОЙКА_ОБМЕНА=$$эл1;lst_id_exch')" Variable="lst_id_tp" Name="" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.ID_ИСТОЧНИК_ДАННЫХ_ФОРМАТ.СПИСОК(Фильтр_списка='ID_НАСТРОЙКА_ОБМЕНА=$$эл1;lst_id_exch')" Variable="lst_id_fr" Name="" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.ID_ИСТОЧНИК_ДАННЫХ_РАСПОЛОЖЕНИЕ.СПИСОК(Фильтр_списка='ID_НАСТРОЙКА_ОБМЕНА=$$эл1;lst_id_exch')" Variable="lst_id_pl" Name="" />
+    <Expression Value="#ТИП_ОБМЕНА.НАИМЕНОВАНИЕ.СПИСОК(Фильтр_списка='ID_ТИП_ОБМЕНА=$$эл1;lst_id_tp')" Variable="lst_tp" Name="" />
+    <Expression Value="#$СПИСОК.ЭЛЕМЕНТ(СПИСОК=lst_tp)" Variable="" Name="Тип" />
+    <Expression Value="#ФОРМАТ_ДАННЫХ_ОБМЕНА.НАИМЕНОВАНИЕ.СПИСОК(Фильтр_списка='ID_ФОРМАТ_ДАННЫХ_ОБМЕНА=$$эл1;lst_id_fr')" Variable="lst_fr" Name="" />
+    <Expression Value="#$СПИСОК.ЭЛЕМЕНТ(СПИСОК=lst_fr)" Variable="" Name="Формат" />
+    <Expression Value="#ОБМЕН_ДАННЫХ_РАСПОЛОЖЕНИЕ.НАИМЕНОВАНИЕ.СПИСОК(Фильтр_списка='ID_ОБМЕН_ДАННЫХ_РАСПОЛОЖЕНИЕ=$$эл1;lst_id_pl')" Variable="lst_pl" Name="" />
+    <Expression Value="#$СПИСОК.ЭЛЕМЕНТ(СПИСОК=lst_pl)" Variable="" Name="Расположение" />
+  </Expressions>
+</Report>

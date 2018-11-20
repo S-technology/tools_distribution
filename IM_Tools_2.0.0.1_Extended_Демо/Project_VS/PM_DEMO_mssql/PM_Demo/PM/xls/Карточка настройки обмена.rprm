@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Карточка настройки обмена.rprm">
+  <Parameters>
+    <Parameter Name=":Настройка_обмена" DataType="Целое" Value="3" DataClass="НАСТРОЙКА_ОБМЕНА" ResultField="ID_НАСТРОЙКА_ОБМЕНА" Enumeration="" ParentParamNumbers="" ParentParamsLinkExpression="" InnerDataClassName="TInuTuningExchTeaaData" InnerResultFieldName="ID_TUNING_EXCH_TEAA" InnerParentParamsLinkExpression="" />
+  </Parameters>
+  <Cycles>
+    <Cycle Name="c1" CycleType="0" StartCycle="10" EndCycle="10" LowBorder="2" HighBorder="5" InfiniteBorders="False" TuneExpressions="nom;class;name;name_sh" SortOrder="" SortOrder2="" AdditionalExpressions="" CrossAdditionalExpressions="" ExcludeRowCharts="" ExcludeColumnCharts="">
+      <IsValid>true</IsValid>
+    </Cycle>
+  </Cycles>
+  <Expressions>
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.НОМ_ПП(Фильтр='ID_НАСТРОЙКА_ОБМЕНА=:Настройка_обмена')" Variable="nom" Name="" />
+    <Expression Value="'Карточка настройки обмена данными № '+INTTOSTR(nom)" Variable="" Name="Заголовок" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.НАИМЕНОВАНИЕ_ПОЛНОЕ(Фильтр='ID_НАСТРОЙКА_ОБМЕНА=:Настройка_обмена')" Variable="" Name="Наименование" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.ID_ТИП_НАСТРОЙКИ_ВВОДА(Фильтр='ID_НАСТРОЙКА_ОБМЕНА=:Настройка_обмена')" Variable="id_tp" Name="" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.ID_ИСТОЧНИК_ДАННЫХ_ФОРМАТ(Фильтр='ID_НАСТРОЙКА_ОБМЕНА=:Настройка_обмена')" Variable="id_fr" Name="" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА.ID_ИСТОЧНИК_ДАННЫХ_РАСПОЛОЖЕНИЕ(Фильтр='ID_НАСТРОЙКА_ОБМЕНА=:Настройка_обмена')" Variable="id_pl" Name="" />
+    <Expression Value="#ТИП_ОБМЕНА.НАИМЕНОВАНИЕ(Фильтр='ID_ТИП_ОБМЕНА=id_tp')" Variable="lst_tp" Name="Тип" />
+    <Expression Value="#ФОРМАТ_ДАННЫХ_ОБМЕНА.НАИМЕНОВАНИЕ(Фильтр='ID_ФОРМАТ_ДАННЫХ_ОБМЕНА=id_fr')" Variable="lst_fr" Name="Формат" />
+    <Expression Value="#ОБМЕН_ДАННЫХ_РАСПОЛОЖЕНИЕ.НАИМЕНОВАНИЕ(Фильтр='ID_ОБМЕН_ДАННЫХ_РАСПОЛОЖЕНИЕ=id_pl')" Variable="lst_pl" Name="Расположение" />
+    <Expression Value="" Variable="" Name="" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА_ОБЪЕКТ.ID_НАСТРОЙКА_ОБМЕНА_ОБЪЕКТ.СПИСОК(Фильтр='ID_НАСТРОЙКИ_ОБМЕНА=:Настройка_обмена', Сортировка='НОМ_ПП')" Variable="lst_obj" Name="" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА_ОБЪЕКТ.НОМ_ПП.СПИСОК(Фильтр_списка='ID_НАСТРОЙКА_ОБМЕНА_ОБЪЕКТ=$$эл1;lst_obj')" Variable="lst_nom" Name="" />
+    <Expression Value="#$СПИСОК.ЭЛЕМЕНТ(СПИСОК=lst_nom)" Variable="" Name="nom" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА_ОБЪЕКТ.ИДЕНТИФИКАТОР_КЛАССА.СПИСОК(Фильтр_списка='ID_НАСТРОЙКА_ОБМЕНА_ОБЪЕКТ=$$эл1;lst_obj')" Variable="lst_cl" Name="" />
+    <Expression Value="#ОПИСАНИЕ_КЛАССА.НАИМЕНОВАНИЕ.СПИСОК(Фильтр_списка='ID=$$эл1;lst_cl')" Variable="lst_nm_cl" Name="" />
+    <Expression Value="#$СПИСОК.ЭЛЕМЕНТ(СПИСОК=lst_nm_cl)" Variable="" Name="class" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА_ОБЪЕКТ.НАИМЕНОВАНИЕ_ПОЛНОЕ.СПИСОК(Фильтр_списка='ID_НАСТРОЙКА_ОБМЕНА_ОБЪЕКТ=$$эл1;lst_obj')" Variable="lst_name" Name="" />
+    <Expression Value="#$СПИСОК.ЭЛЕМЕНТ(СПИСОК=lst_name)" Variable="" Name="name" />
+    <Expression Value="#НАСТРОЙКА_ОБМЕНА_ОБЪЕКТ.НАИМ_СОКР.СПИСОК(Фильтр_списка='ID_НАСТРОЙКА_ОБМЕНА_ОБЪЕКТ=$$эл1;lst_obj')" Variable="lst_name_sh" Name="" />
+    <Expression Value="#$СПИСОК.ЭЛЕМЕНТ(СПИСОК=lst_name_sh)" Variable="" Name="name_sh" />
+  </Expressions>
+</Report>

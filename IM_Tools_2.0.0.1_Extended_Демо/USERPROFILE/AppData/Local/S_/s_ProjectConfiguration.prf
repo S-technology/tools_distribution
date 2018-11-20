@@ -1,0 +1,2 @@
+﻿MSSQL=ServerType=MSSQL;ServerName=MSSQL-V1;ProxyUser=custom;ProjectConfigCreate=true;ProjectConfigPath=C:\TEMP\s_ProjectConfiguration;ProjectScriptCreate=true;ProjectScriptPath=c:\Program Files\IM_Projects\IM_Tools_2.0.0.1_Extended_Демо\SDK\cfg_mssql
+IM_ORA=ServerType=ORACLE;ServerName=TOOLS_TEST;ProjectId=PM;ProjectLocationLevel2=PM_DATA,S_DATA;ProxyUser=custom;ProjectConfigCreate=true;ProjectConfigPath=C:\TEMP\s_ProjectConfiguration;ProjectScriptCreate=true;ProjectScriptPath=c:\Program Files\IM_Projects\IM_Tools_2.0.0.1_Extended_Демо\SDK\cfg_oracle

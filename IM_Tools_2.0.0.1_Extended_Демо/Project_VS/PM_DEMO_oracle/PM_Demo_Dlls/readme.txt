@@ -1,0 +1,1 @@
+взято из ...\VSS\PM\PM\PM\bin\Debug

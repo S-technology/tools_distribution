@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[PM.csproj]
+SCC_Aux_Path = "\\NAS\L\app\proj\vss\Refactor"
+SCC_Project_Name = "$/Refactor/PM/PM_ORA/PM", UIKCAAAA
+
+[PM_ORA.csproj]
+SCC_Aux_Path = "\\NAS\L\app\proj\vss\Refactor"
+SCC_Project_Name = "$/Refactor/PM/PM/PM", ZWJAAAAA

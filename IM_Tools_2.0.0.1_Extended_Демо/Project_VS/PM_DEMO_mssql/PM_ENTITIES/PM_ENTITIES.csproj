@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78590968-D57C-482D-B705-468A32BB708D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PM_ENTITIES</RootNamespace>
+    <AssemblyName>PM_ENTITIES</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PM_Entities.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClientJabberService">
+      <HintPath>..\PM_Demo_Dlls\ClientJabberService.dll</HintPath>
+    </Reference>
+    <Reference Include="IM.Hierarchy">
+      <HintPath>..\PM_Demo_Dlls\IM.Hierarchy.dll</HintPath>
+    </Reference>
+    <Reference Include="IM.Maps">
+      <HintPath>..\PM_Demo_Dlls\IM.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="S_">
+      <HintPath>..\PM_Demo_Dlls\S_.dll</HintPath>
+    </Reference>
+    <Reference Include="S_.WF, Version=4.4.328.10406, Culture=neutral, PublicKeyToken=efbf079f4eb90d94, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PM_Demo_Dlls\S_.WF.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\ESrDetailRemark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ESrFavorite.cs" />
+    <Compile Include="Entities\ESrPhysPerson.cs" />
+    <Compile Include="Entities\ESrRClient.cs" />
+    <Compile Include="Entities\ESrRemark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ESrRExecutive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ESrRProject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ESrRPromptness.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\ESrRStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schemes\Client_Ordinate_scheme.cs" />
+    <Compile Include="Schemes\Client_Scheme.cs" />
+    <Compile Include="Schemes\ExecutorsScheme.cs" />
+    <Compile Include="Schemes\Executors_OrdinateScheme.cs" />
+    <Compile Include="Schemes\PhysPersScheme.cs" />
+    <Compile Include="Schemes\Remarks_scheme.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PM_Entities.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
